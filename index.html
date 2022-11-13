@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>MQTT Broker For Getting Data</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+   <script src="mqtt-structure.js" type="text/javascript"></script>
+</head>
+<body>
+   <div class="bg"></div>
+   <div class="bg bg2"></div>
+   <div class="bg bg3"></div>
+   <div class="content">
+   <div class="wrapper">
+      <h1> IOT2000</h1>
+      <form id="connection-information-form">
+         <b>IP Address:</b>
+         <input id="host" class="IP" type="text" name="host" value="test.mosquitto.org"><br>
+         <b>Port:</b>
+         <input id="port" type="text" name="port" value="8080"><br>
+         <input type="button" class='on' onclick="startConnect()" value="Connect">
+         <input type="button" class='off' onclick="startDisconnect()" value="Disconnect"><br>
+         <b>Control:</b><br>
+         <input type="button" class='btn5-hover btn5' onclick="start()" value="START"><br>
+         <input type="button" class='btn5-hover btn5' onclick="stop()" value="STOP"><br>
+         <input type="button" class='btn5-hover btn5' onclick="reset()" value="RESET"><br>
+         <table>
+            <tr><td >Số lượng sản phẩm 1:<td><td id="count"><td><td>
+            <tr><td >Số lượng sản phẩm 2:<td><td id="count1"><td><td>
+            <tr><td >Số lượng sản phẩm 3:<td><td id="count2"><td><td>
+            <tr><td >Số lượng sản phẩm 4:<td><td id="count3"><td><td>
+            <tr><td >Số lượng sản phẩm 5:<td><td id="count4"><td><td>
+            </table>
+      </form>
+      <div id="messages"></div>
+   </div>
+</body>
+</html>
